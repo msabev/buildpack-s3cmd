@@ -10,9 +10,6 @@ CACHE_DIR=$2
 TARGET_DIR="$BUILD_DIR/vendor"
 APP_DIR=/app
 
-echo "-----> Installing python dateutil"
-apt-get install python-dateutil
-
 echo "-----> Installing s3cmd-$VERSION"
 mkdir -p $BUILD_DIR $BUILD_DIR/.profile.d $CACHE_DIR $TARGET_DIR
 cd $TARGET_DIR
