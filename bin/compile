@@ -13,7 +13,7 @@ APP_DIR=/app
 echo "-----> Installing s3cmd-$VERSION"
 mkdir -p $BUILD_DIR $BUILD_DIR/.profile.d $CACHE_DIR $TARGET_DIR
 cd $TARGET_DIR
-curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 https://github.com/s3tools/s3cmd/releases/download/v2.0.1/s3cmd-2.0.1.tar.gz -s -o - | tar zxf -
+curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 -sL https://github.com/s3tools/s3cmd/releases/download/v2.0.1/s3cmd-2.0.1.tar.gz | tar xz
 
 echo "       Setting PATH"
 cat <<EOF > $BUILD_DIR/.profile.d/buildpack-s3cmd.sh
